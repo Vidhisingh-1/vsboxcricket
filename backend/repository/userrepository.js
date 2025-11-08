@@ -5,4 +5,12 @@ async function finduser(email)
 {
     await User.findOne({email});
 }
-module.exports={finduser};
+async function createnewuser(email,hashedpassword)
+{
+    const createduser=await User.create({
+        email,
+        password:hashedpassword,
+    })
+    return createduser;
+}
+module.exports={finduser,createnewuser};
