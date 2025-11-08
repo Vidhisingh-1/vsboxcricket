@@ -40,3 +40,4 @@ function signup_invalidator(req,res,next){
     }
     next();
 }
+module.exports={signup_invalidator};
