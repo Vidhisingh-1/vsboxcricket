@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 
-const User=mongoose.Schema({
+const userschema=mongoose.Schema({
     email:{
         type:string,
         required:true,
@@ -12,4 +12,4 @@ const User=mongoose.Schema({
         required:true,
     }
 });
-module.exports={User};
+module.exports=mongoose.model('User',userschema);
