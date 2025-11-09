@@ -3,7 +3,7 @@ const { User } = require('../models/user');
 
 async function finduser(email)
 {
-    await User.findOne({email});
+    return await User.findOne({email});
 }
 async function createnewuser(email,hashedpassword)
 {

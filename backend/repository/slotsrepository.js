@@ -17,4 +17,12 @@ async function book({time,date,total_people})
        console.error("Error booking slot:", error); 
     }
 }
-module.exports={book};
+async function findslot({time,date})
+{
+    const slotexist=await Slot.findOne({
+        date,
+        time,
+    });
+    return slotexist;
+}
+module.exports={book,findslot};
