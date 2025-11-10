@@ -7,7 +7,6 @@ const bookslot=require('./routes/slotroutes/bookslot');
 const currentslot=require('./routes/slotroutes/currentslot');
 const bookinghistory=require('./routes/slotroutes/bookinghistory');
 
-
 dotenv.config();
 
 const app=express();
